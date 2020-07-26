@@ -109,6 +109,22 @@ test('[NPM style] non-unicode', () => {
   ].join('\n'));
 });
 
+test('[NPM style] drawRootBranch', () => {
+  const s = archy.draw(beepNode, { style: 'NPM', drawRootBranch: true });
+  assert.strictEqual(s, [
+    '└─┬ beep',
+    '  ├── ity',
+    '  └─┬ boop',
+    '    ├─┬ o_O',
+    '    │ ├─┬ oh',
+    '    │ │ ├── hello',
+    '    │ │ └── puny',
+    '    │ └── human',
+    '    └── party!',
+    ''
+  ].join('\n'));
+});
+
 test('[NPM style] async', async () => {
   const options = {
     style: 'NPM',
@@ -190,6 +206,22 @@ test('[FMW style] non-unicode', () => {
       '    |   `-- human',
       '    `-- party!',
       ''
+  ].join('\n'));
+});
+
+test('[FMW style] drawRootBranch', () => {
+  const s = archy.draw(beepNode, { style: 'FMW', drawRootBranch: true });
+  assert.strictEqual(s, [
+    '└── beep',
+    '    ├── ity',
+    '    └── boop',
+    '        ├── o_O',
+    '        │   ├── oh',
+    '        │   │   ├── hello',
+    '        │   │   └── puny',
+    '        │   └── human',
+    '        └── party!',
+    ''
   ].join('\n'));
 });
 

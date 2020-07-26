@@ -54,11 +54,11 @@ beep
 
 | Key | Value |
 | -- | -- |
-| style | support `'NPM'` or `'FMW'` |
+| style | default is `'NPM'`, support `'NPM'` or `'FMW'` |
 | label | default is `'label'`, support function |
 | nodes | default is `'nodes'`, support function |
 | unicode | default is `true` |
-| drawRootBranch| default is `false` |
+| drawRootBranch | default is `false` |
 | prefix | default is `''` |
 
 ## Inspired by

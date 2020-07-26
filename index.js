@@ -83,7 +83,7 @@ function drawStyle(style, node, options, prefix, last, isRoot) {
     nextPrefix += style.childNodeNextPrefix(options, last);
 
   } else if (options.drawRootBranch) {
-    tree += style.rootNode(options, node);
+    tree += style.rootNode(options, nodes);
     nextPrefix += style.rootNodeNextPrefix(options);
   }
 
@@ -108,7 +108,7 @@ async function drawStyleAsync(style, node, options, prefix, last, isRoot) {
     nextPrefix += style.childNodeNextPrefix(options, last);
 
   } else if (options.drawRootBranch) {
-    tree += style.rootNode(options, node);
+    tree += style.rootNode(options, nodes);
     nextPrefix += style.rootNodeNextPrefix(options);
   }
 
