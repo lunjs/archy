@@ -60,6 +60,7 @@ beep
 | unicode | default is `true` |
 | drawRootBranch | default is `false` |
 | prefix | default is `''` |
+| concurrency | default is `Infinity`, only for `drawAsync` |
 
 ## Inspired by
 

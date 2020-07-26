@@ -10,6 +10,7 @@ export interface DrawOptions {
     drawRootBranch?: boolean;
     prefix?: string;
     unicode?: boolean;
+    concurrency?: number;
 }
 
 export function draw(node: any, options: DrawOptions): string;
