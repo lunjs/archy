@@ -1,10 +1,12 @@
-export interface STYLE {
+export interface Style {
     NPM: 'NPM';
     FMW: 'FMW';
 }
 
+export declare const STYLE: Style;
+
 export interface DrawOptions {
-    style?: keyof STYLE;
+    style?: keyof Style;
     label?: string | ((node: any) => string | Promise<string>);
     nodes?: string | ((node: any) => any[] | Promise<any[]>);
     drawRootBranch?: boolean;

@@ -57,7 +57,7 @@ const multiLineBeepNode = {
 };
 
 test('[NPM style] beep', () => {
-  const s = archy.draw(beepNode, { style: 'NPM' });
+  const s = archy.draw(beepNode, { style: archy.STYLE.NPM });
   assert.strictEqual(s, [
     'beep',
     '├── ity',
@@ -73,7 +73,7 @@ test('[NPM style] beep', () => {
 });
 
 test('[NPM style] multi-line', () => {
-  const s = archy.draw(multiLineBeepNode, { style: 'NPM' });
+  const s = archy.draw(multiLineBeepNode, { style: archy.STYLE.NPM });
   assert.strictEqual(s, [
       'beep',
       '│ one',
@@ -94,7 +94,7 @@ test('[NPM style] multi-line', () => {
 });
 
 test('[NPM style] non-unicode', () => {
-  const s = archy.draw(beepNode, { style: 'NPM', unicode : false });
+  const s = archy.draw(beepNode, { style: archy.STYLE.NPM, unicode : false });
   assert.strictEqual(s, [
       'beep',
       '+-- ity',
@@ -110,7 +110,7 @@ test('[NPM style] non-unicode', () => {
 });
 
 test('[NPM style] drawRootBranch', () => {
-  const s = archy.draw(beepNode, { style: 'NPM', drawRootBranch: true });
+  const s = archy.draw(beepNode, { style: archy.STYLE.NPM, drawRootBranch: true });
   assert.strictEqual(s, [
     '└─┬ beep',
     '  ├── ity',
@@ -127,7 +127,7 @@ test('[NPM style] drawRootBranch', () => {
 
 test('[NPM style] async', async () => {
   const options = {
-    style: 'NPM',
+    style: archy.STYLE.NPM,
     async label(node) {
       await new Promise(resolve => setTimeout(resolve, 100));
       if (typeof node === 'string') {
@@ -157,7 +157,7 @@ test('[NPM style] async', async () => {
 });
 
 test('[FMW style] beep', () => {
-  const s = archy.draw(beepNode, { style: 'FMW' });
+  const s = archy.draw(beepNode, { style: archy.STYLE.FMW });
   assert.strictEqual(s, [
     'beep',
     '├── ity',
@@ -173,7 +173,7 @@ test('[FMW style] beep', () => {
 });
 
 test('[FMW style] multi-line', () => {
-  const s = archy.draw(multiLineBeepNode, { style: 'FMW' });
+  const s = archy.draw(multiLineBeepNode, { style: archy.STYLE.FMW });
   assert.strictEqual(s, [
       'beep',
       'one',
@@ -194,7 +194,7 @@ test('[FMW style] multi-line', () => {
 });
 
 test('[FMW style] non-unicode', () => {
-  const s = archy.draw(beepNode, { style: 'FMW', unicode : false });
+  const s = archy.draw(beepNode, { style: archy.STYLE.FMW, unicode : false });
   assert.strictEqual(s, [
       'beep',
       '+-- ity',
@@ -210,7 +210,7 @@ test('[FMW style] non-unicode', () => {
 });
 
 test('[FMW style] drawRootBranch', () => {
-  const s = archy.draw(beepNode, { style: 'FMW', drawRootBranch: true });
+  const s = archy.draw(beepNode, { style: archy.STYLE.FMW, drawRootBranch: true });
   assert.strictEqual(s, [
     '└── beep',
     '    ├── ity',
@@ -227,7 +227,7 @@ test('[FMW style] drawRootBranch', () => {
 
 test('[FMW style] async', async () => {
   const options = {
-    style: 'FMW',
+    style: archy.STYLE.FMW,
     async label(node) {
       await new Promise(resolve => setTimeout(resolve, 100));
       if (typeof node === 'string') {
