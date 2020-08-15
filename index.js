@@ -66,7 +66,7 @@ function buildDrawArgs(node, options) {
 
   let style = styleMap[options.style || STYLE.NPM];
   if (!style) {
-    throw new Error('');
+    throw new Error(`Not supports style "${style}"`);
   }
 
   return [style, node, opts, options.prefix || '', true, true]
