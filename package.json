@@ -1,6 +1,6 @@
 {
   "name": "@lunjs/archy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "render nested hierarchies `npm ls` style with unicode pipes",
   "main": "index.js",
   "typings": "index.d.ts",
